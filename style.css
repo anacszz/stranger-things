@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url("assets/fonts/Benguiat\ Bold.ttf");
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 4vw;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 5;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+/* PRELOADER */
+  #preloader {
+    width: 100%;
+    height: 100%;
+    background-color: #0c0102;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 40vw;
+      height: auto;
+
+      path {
+        fill: rgb(168, 19, 19, 0.364);
+        stroke: rgb(168, 19, 19);
+        stroke-dasharray: 1130;
+        stroke-dashoffset: 1130;
+      }
+    }
+  }
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bg-monster {
+  background-image: url("assets/img/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+}
+
+.container-hero {
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  .content-left-hero,
+  .content-right-hero {
+    width: 30%;
+    z-index: 3;
+  }
+
+  .content-left-hero {
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: 3.7vw;
+      font-family: "Benguiat";
+    }
+  }
+
+  .content-right-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+  }
+}
+
+.container-hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.container-city {
+  flex-direction: column;
+  position: relative;
+
+  .title-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-citys {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card-city {
+      background-image: url("assets/img/card1.webp");
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .card-city:nth-child(2) {
+      background-image: url("assets/img/card2.webp");
+    }
+
+    .card-city:nth-child(3) {
+      background-image: url("assets/img/card3.webp");
+    }
+  }
+}
+
+.container-testimonials {
+  flex-direction: column;
+
+  .content-partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .cards-testimonials {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+
+    .card-testimonial {
+      width: 31%;
+    }
+  }
+}
+
+.container-thanks {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("assets/img/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+
+  .container-footer {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .logo-footer {
+      width: 30%;
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+      }
+    }
+
+    .details-footer {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .social-media {
+        ul {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  .logos-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .infinite-text-footer {
+    display: flex;
+    width: max-content;
+
+    h3 {
+      color: rgb(182, 180, 180);
+      font-size: 13vw;
+      font-family: "Benguiat", sans-serif;
+      mix-blend-mode: color-dodge;
+      animation: textoInfinito 14s infinite linear;
+      padding-left: 8vw;
+    }
+  }
+}
+
+.container-thanks {
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+}
+
+
+
+@keyframes textoInfinito {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width: 1500px) {
+  .container-city {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container-city .content-citys .card-city {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+
+  @media (max-width: 1130px) {
+    .container-thanks ul {
+      display: flex;
+      width: max-content;
+      gap: 32px;
+    }
+
+    .dup {
+      display: list-item;
+    }
+  }
+
+  @media (max-width: 600px) {
+    section {
+      padding: 4vw;
+    }
+
+    h2 {
+      font-size: 6vw;
+    }
+
+    header h2 {
+      font-size: 28px;
+    }
+
+    .container-hero {
+      flex-direction: column;
+      padding: 26% 4vw 0;
+
+      .content-left-hero,
+      .content-right-hero {
+        width: 100%;
+      }
+
+      .content-left-hero {
+        h3,
+        h1 {
+          text-align: center;
+        }
+        h1 {
+          font-size: 12vw;
+        }
+      }
+
+      .content-right-hero {
+        align-items: start;
+        p {
+          font-size: 5.5vw;
+          text-align: start;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .container-city {
+      margin-top: 80px;
+      button {
+        display: none;
+      }
+
+      .content-citys {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+
+        .card-city {
+          width: 100%;
+        }
+      }
+    }
+
+    .container-testimonials {
+      .content-partners {
+        img:nth-child(1),
+        img:nth-child(3) {
+          width: 20%;
+        }
+
+        img:nth-child(2) {
+          width: 40%;
+        }
+      }
+
+      .cards-testimonials {
+        flex-direction: column;
+        gap: 48px;
+
+        .card-testimonial {
+          width: 100%;
+        }
+      }
+    }
+
+    .container-thanks {
+      margin: 40px 0px 60px;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        width: max-content;
+        gap: 32px;
+      }
+    }
+
+    footer {
+      padding-top: 40px;
+      .container-footer {
+        padding: 4vw;
+        flex-direction: column;
+
+        .logo-footer {
+          width: 100%;
+
+          h2,
+          h3 {
+            text-align: center;
+          }
+          h2 {
+            font-size: 12vw;
+          }
+        }
+
+        .details-footer {
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: start;
+
+          .social-media {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px 0px 32px;
+          }
+
+          .institutional {
+            width: 40%;
+          }
+
+          .partners-midia-footer {
+            width: 50%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .logos-footer {
+        margin-top: 40px;
+      }
+
+      .infinite-text-footer h3 {
+        font-size: 20vw;
+      }
+    }
+  }
+}
