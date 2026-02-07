@@ -107,3 +107,6 @@ tl.to("#preloader path", {
   duration: 0.5,
   strokeDashoffset: 0,
 });
+
+const thanksList = document.querySelector(".container-thanks ul");
+thanksList.innerHTML += thanksList.innerHTML;
