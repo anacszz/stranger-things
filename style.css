@@ -52,27 +52,27 @@ button {
 }
 
 /* PRELOADER */
-  #preloader {
-    width: 100%;
-    height: 100%;
-    background-color: #0c0102;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#preloader {
+  width: 100%;
+  height: 100%;
+  background-color: #0c0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    svg {
-      width: 40vw;
-      height: auto;
+  svg {
+    width: 40vw;
+    height: auto;
 
-      path {
-        fill: rgb(168, 19, 19, 0.364);
-        stroke: rgb(168, 19, 19);
-        stroke-dasharray: 1130;
-        stroke-dashoffset: 1130;
-      }
+    path {
+      fill: rgb(168, 19, 19, 0.364);
+      stroke: rgb(168, 19, 19);
+      stroke-dasharray: 1130;
+      stroke-dashoffset: 1130;
     }
   }
+}
 
 h2 {
   font-size: 40px;
@@ -116,7 +116,6 @@ ul {
       object-fit: cover;
     }
   }
-
 
   .content-left-hero,
   .content-right-hero {
@@ -229,8 +228,14 @@ ul {
 
   ul {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    gap: 48px;
+    width: max-content;
+    animation: none;
+    font-size: 1.25rem;
+  }
+  /* ESCONDE A DUPLICAÇÃO NO DESKTOP */
+  ul li:nth-child(n + 12) {
+    display: none;
   }
 }
 
@@ -313,14 +318,11 @@ footer {
   background-color: #0c0102;
 }
 
-
-
 @keyframes textoInfinito {
   100% {
     transform: translateX(-100%);
   }
 }
-
 
 @media (max-width: 1500px) {
   .container-city {
@@ -341,30 +343,26 @@ footer {
       width: max-content;
       gap: 32px;
     } */
-   .container-thanks {
-    overflow: hidden;
-  }
+    .container-thanks {
+      overflow: hidden;
+    }
 
-  .container-thanks ul {
-    display: flex;
-    gap: 48px;
-    width: max-content;
-    animation: thanksInfinite 25s linear infinite;
-  }
+    .container-thanks ul {
+      animation: thanksInfinite 25s linear infinite;
+    }
 
-  .container-thanks ul li {
-    font-size: 22px;
-    white-space: nowrap;
-  }
-
+    .container-thanks ul li {
+      font-size: 22px;
+      white-space: nowrap;
+      display: inline-flex;
+    }
   }
 
   @keyframes thanksInfinite {
-  100% {
-    transform: translateX(-50%);
+    100% {
+      transform: translateX(-50%);
+    }
   }
-}
-
 
   @media (max-width: 600px) {
     section {
